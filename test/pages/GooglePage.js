@@ -1,6 +1,9 @@
+const CommonPage = require("./CommonPage");
 
-class GooglePage {
+class GooglePage extends CommonPage{
+  
   constructor(page) {
+    super(page);
     this.page = page;
     this.searchInput = 'textarea[name="q"]';
   }
@@ -15,4 +18,4 @@ class GooglePage {
   }
 }
 
-module.exports = GooglePage;
+module.exports = {GooglePage};
